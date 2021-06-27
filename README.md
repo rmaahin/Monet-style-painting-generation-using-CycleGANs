@@ -14,4 +14,4 @@ The dataset was provided as part of the Kaggle Competition, [I'm Something of a 
 Training takes approximately 7 mins for one epoch on Nvidia GTX 1060 max-q. I suggest you use google colab since the dataset is quite small.
 
 * To test the model:
-  Train 
+  Train.py has a segment dedicated to testing random images from the dataset. It converts random images from photos and converts them to monet style paintings.
