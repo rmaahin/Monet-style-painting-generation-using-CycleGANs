@@ -1,2 +1,3 @@
 # Monet-style-painting-generation-using-CycleGANs
-The idea is to generate monet style painting images using Images taken from a camera.
+CycleGAN is a method for performing image-to-image translation as indicated by [Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks](https://arxiv.org/abs/1703.10593)
+
