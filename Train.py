@@ -260,3 +260,25 @@ cycle_gan_model.fit(
 # Save the final weights 
 model_filepath = "model_checkpoints/cyclegan_checkpoints.{epoch:03d}"
 cycle_gan_model.save_weights(model_filepath)
+
+cycle_gan_model.load_weights(model_filepath).expect_partial()
+print("Weights loaded successfully")
+
+_, ax = plt.subplots(4, 2, figsize=(10, 15))
+for i, img in enumerate(ds_photo.take(4)):
+    prediction = cycle_gan_model.gen_G(img, training=False)[0].numpy()
+    prediction = (prediction * 127.5 + 127.5).astype(np.uint8)
+    img = (img[0] * 127.5 + 127.5).numpy().astype(np.uint8)
+
+    ax[i, 0].imshow(img)
+    ax[i, 1].imshow(prediction)
+    ax[i, 0].set_title("Input image")
+    ax[i, 0].set_title("Input image")
+    ax[i, 1].set_title("Translated image")
+    ax[i, 0].axis("off")
+    ax[i, 1].axis("off")
+
+    prediction = keras.preprocessing.image.array_to_img(prediction)
+    prediction.save("predicted_img_{i}.png".format(i=i))
+plt.tight_layout()
+plt.show()
