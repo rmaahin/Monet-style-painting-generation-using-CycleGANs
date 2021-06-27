@@ -9,4 +9,9 @@ This code was written in Python (3.9.5) and Tensorflow (2.5.0).
 The dataset was provided as part of the Kaggle Competition, [I'm Something of a Painter Myself](https://www.kaggle.com/c/gan-getting-started). You can download the dataset by simply entering the competition.
 
 * To train the model:
-  Run [Train.py](https://github.com/rmaahin/Monet-style-painting-generation-using-CycleGANs/blob/main/Train.py)
+  Run [Train.py](https://github.com/rmaahin/Monet-style-painting-generation-using-CycleGANs/blob/main/Train.py) 
+  
+Training takes approximately 7 mins for one epoch on Nvidia GTX 1060 max-q. I suggest you use google colab since the dataset is quite small.
+
+* To test the model:
+  Train 
